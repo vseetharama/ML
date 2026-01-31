@@ -1,0 +1,15 @@
+Step 1: Open Project Folder
+- Open VS Code
+- Go to File → Open Folder
+- Select your project folder
+
+Step 2: Create Jupyter Notebook
+- Press Ctrl + Shift + P
+- Type: Jupyter: Create New Blank Notebook
+- Press Enter
+- Save the file as: lab1.ipynb
+
+Step 3: Select Python Kernel
+- Open lab1.ipynb
+- Click "Select Kernel" (top-right)
+- Choose: Python Environments → Python 3.x
