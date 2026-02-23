@@ -1,0 +1,57 @@
+Result for k=1:
+['class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=2:
+['class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=3:
+['class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=4:
+['class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=5:
+['class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=20:
+['class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+Result for k=30:
+['class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'class2' 'Class 1'
+ 'class2' 'class2' 'class2' 'class2' 'Class 1' 'class2' 'class2' 'Class 1'
+ 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'Class 1' 'Class 1'
+ 'Class 1' 'class2' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'Class 1' 'Class 1' 'class2' 'class2' 'class2'
+ 'Class 1' 'Class 1' 'class2' 'class2' 'Class 1'] /n
+
