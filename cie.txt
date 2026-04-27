@@ -1,0 +1,203 @@
+CIE 4
+If attribute values differ in positive examples, Find-S will:
+Keep same value
+Ignore attribute
+Delete attribute
+Replace with '?' ✅
+Similarity-based learning is also known as:
+Instance-based learning ✅
+Supervised clustering
+Rule-based learning
+Model-based learning
+Training data in Find-S is usually stored in:
+.csv ✅
+.txt
+.html
+.exe
+In k-NN, classification is based on:
+Majority voting ✅
+Probability
+Euclidean distance
+Weights assignment
+k-NN is an example of:
+Eager learning
+Lazy learning ✅
+Reinforcement learning
+Deep Learning
+Main limitation of Find-S is:
+Too complex
+Needs large memory
+Requires GPU
+Ignores negative examples ✅
+Find-S cannot handle:
+Small datasets
+Binary attributes
+Noisy data ✅
+CSV files
+Find-S works only with which type of examples?
+Random examples
+Both positive and negative
+Only positive examples ✅
+Negative examples
+What is required before applying k-NN?
+None of the above
+Distance calculation ✅
+Feature removal
+Hypothesis space means:
+Dataset size
+Set of all possible hypotheses ✅
+Algorithm steps
+CSV file
+CIE 6
+Locally Weighted Regression is:
+Clustering algorithm
+Reinforcement learning method
+Non-parametric algorithm ✅
+Parametric algorithm
+Points closer to query point get:
+Lower weight
+Higher weight ✅
+Zero weight
+Same weight
+LWR is mainly used for:
+Dimensionality reduction
+Clustering
+Classification
+Regression ✅
+Kernel function in LWR is used to:
+Assign weights ✅
+Increase dataset
+Reduce features
+Normalize data
+Common kernel used in LWR is:
+Sigmoid kernel
+Gaussian kernel ✅
+Linear kernel
+Polynomial kernel
+If τ is very small, model becomes:
+Constant
+Underfitted
+Smooth
+Overfitted ✅
+LWR requires solving regression for:
+Entire dataset once
+Only test data
+Only training data
+Each query point ✅
+In LWR, weight matrix is:
+Random matrix
+Identity matrix
+Diagonal matrix ✅
+Sparse matrix
+Graph of LWR compared to linear regression is:
+Smooth curve following data ✅
+Random line
+Step function
+Straight line
+LWR is best suited for:
+Large high-dimensional data
+Small datasets with patterns ✅
+Only text data
+Only images
+CIE 7
+Linear Regression equation is of form:
+y = mx + c ✅
+y = x²
+y = log(x)
+y = sin(x)
+Polynomial Regression equation includes:
+Only x
+Powers of x ✅
+Only constants
+Only logs
+Auto MPG Dataset is used to predict:
+House rent
+Engine power
+Fuel efficiency ✅
+Speed
+If polynomial degree = 1, it becomes:
+Logistic Regression
+Linear Regression ✅
+KNN
+SVM
+Boston Housing Dataset is used to predict:
+Car mileage
+House prices ✅
+Population
+Weather
+Polynomial Regression curve looks like:
+Straight line
+Curved line ✅
+Step function
+Random noise
+Linear Regression assumes relationship is:
+Linear ✅
+Random
+Exponential
+Discrete
+Linear Regression is used for:
+Classification
+Regression ✅
+Clustering
+Association
+Polynomial Regression can model:
+Only straight lines
+Non-linear relationships ✅
+Only binary data
+Only categorical data
+Common loss function used is:
+Cross entropy
+Mean Squared Error ✅
+Hinge loss
+Log loss
+CIE 8
+The top node of a decision tree is called:
+Leaf node
+Root node ✅
+Child node
+Decision boundary
+Entropy measures:
+Distance
+Disorder or impurity ✅
+Accuracy
+Size
+Information Gain is used to:
+Reduce dataset size
+Select best feature for split ✅
+Normalize data
+Remove noise
+Decision Tree can handle:
+Only numerical data
+Only categorical data
+Both numerical and categorical data ✅
+Only text data
+Final nodes of the tree are called:
+Root nodes
+Leaf nodes ✅
+Parent nodes
+Hidden nodes
+Decision Tree structure consists of:
+Nodes and edges ✅
+Layers and neurons
+Tables and rows
+Clusters
+A decision tree splits data based on:
+Random selection
+Feature values ✅
+Dataset size
+Labels only
+Breast Cancer dataset is used for:
+Regression
+Image processing
+Classification ✅
+Clustering
+Common criterion used for splitting in Decision Tree is:
+Euclidean distance
+Entropy ✅
+Cosine similarity
+Manhattan distance
+Decision Tree is mainly used for:
+Regression only
+Classification and regression ✅
+Clustering
+Dimensionality reduction
