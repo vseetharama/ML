@@ -201,3 +201,169 @@ Regression only
 Classification and regression ✅
 Clustering
 Dimensionality reduction
+
+
+CIE 9 and 10
+Total points
+15/20
+ 
+The respondent's email (seetharama.23cs177@sode-edu.in) was recorded on submission of this form.
+0 of 0 points
+Section
+*
+c
+USN
+*
+4mw23cs177
+Name
+*
+v seetharama mugeraya
+Questions
+8 of 10 points
+  What is the output of a Naive Bayes classifier?
+*
+1/1
+Cluster labels
+Probability distribution of classes
+Regression values
+Distance measure
+  What does prior probability represent?
+*
+1/1
+Probability of features given class
+Probability of class before seeing data
+Conditional probability
+Error probability
+  Accuracy of classifier is calculated as:
+*
+1/1
+Correct predictions / Total predictions
+Incorrect / Total
+Precision × Recall
+Recall / Precision
+  Which Naive Bayes variant is commonly used for continuous data like images?
+*
+1/1
+Multinomial NB
+Bernoulli NB
+Gaussian NB
+Categorical NB
+  What is the typical size of images in Olivetti dataset?
+*
+0/1
+32×32
+64×64
+92×112
+128×128
+  The “naive” assumption refers to:  
+*
+1/1
+Data is normalized
+Features are independent
+Data is continuous
+Features are correlated
+  Naive Bayes is based on which theorem?
+*
+1/1
+Markov theorem
+Bayes theorem
+Central limit theorem
+Pythagoras theorem
+  What type of learning algorithm is Naive Bayes?
+*
+1/1
+Supervised
+Unsupervised
+Reinforcement
+Semi-supervised
+  Which library provides Olivetti dataset in Python?
+*
+1/1
+TensorFlow
+scikit-learn
+NumPy
+Pandas
+  Olivetti dataset is mainly used for:  
+*
+0/1
+Text classification
+Face recognition
+Speech recognition
+Time series analysis
+Program 10
+7 of 10 points
+  What is a centroid?
+*
+1/1
+Random point
+Mean of cluster points
+Outlier
+Boundary point
+  Wisconsin Breast Cancer dataset is used for:
+*
+0/1
+Image processing
+Clustering/classification
+Natural language processing
+Audio processing
+  K-means algorithm stops when:
+*
+1/1
+Accuracy is maximum
+Centroids do not change
+Data is normalized
+Iterations reach 1
+  Visualization of clustering is usually done using:
+*
+1/1
+Histogram
+Scatter plot
+Pie chart
+Bar graph
+  K-means is a:
+*
+0/1
+Supervised algorithm
+Unsupervised algorithm
+Reinforcement algorithm
+Classification algorithm
+  What does “k” represent in k-means?
+*
+0/1
+Number of features
+Number of clusters
+Number of samples
+Number of iterations
+  K-means is sensitive to:
+*
+1/1
+Data size
+Initial centroid selection
+File format
+Programming language
+  Which distance is commonly used in k-means?
+*
+1/1
+Manhattan
+Euclidean
+Hamming
+Cosine
+  K-means clustering is based on:
+*
+1/1
+Decision trees
+Distance calculation
+Neural networks
+Probability rules
+  What is the main objective of k-means clustering?
+*
+1/1
+Minimize the sum of squared distances within clusters
+Maximize the distance between all points
+Reduce number of features
+Increase number of clusters
+This form was created inside of Shri Sode Vadiraja Mutt Education Trust. - Contact form owner
+Does this form look suspicious? Report
+
+Google Forms
+
