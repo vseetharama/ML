@@ -7,13 +7,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_california_housing
 
-# Load California Housing dataset
 df = fetch_california_housing(as_frame=True).frame
 
-# Select numerical columns
 cols = df.select_dtypes(include=np.number).columns
 
-# -------- Histograms --------
 plt.figure(figsize=(15,10))
 for i in range(len(cols)):
     plt.subplot(3,3,i+1)
@@ -22,7 +19,6 @@ for i in range(len(cols)):
 plt.tight_layout()
 plt.show()
 
-# -------- Boxplots --------
 plt.figure(figsize=(15,10))
 for i in range(len(cols)):
     plt.subplot(3,3,i+1)
@@ -31,25 +27,17 @@ for i in range(len(cols)):
 plt.tight_layout()
 plt.show()
 
-# -------- Outlier Detection (IQR Method) --------
 print("Outliers count:")
-
 outliers_summary = {}
-
 for col in cols:
     Q1 = df[col].quantile(0.25)
     Q3 = df[col].quantile(0.75)
     IQR = Q3 - Q1
-
     lower = Q1 - 1.5 * IQR
     upper = Q3 + 1.5 * IQR
-
     count = df[(df[col] < lower) | (df[col] > upper)].shape[0]
     outliers_summary[col] = count
-
 print(outliers_summary)
-
-# -------- Summary Statistics --------
 print(df.describe())
 ________________________________________
 LAB 2
@@ -60,19 +48,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_california_housing
 
-# Load California Housing dataset
 data = fetch_california_housing(as_frame=True).frame
-
-# -------- Correlation Matrix --------
 correlation_matrix = data.corr()
 
-# -------- Heatmap --------
 plt.figure(figsize=(10,8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.title("Correlation Matrix of California Housing Dataset")
 plt.show()
 
-# -------- Pairplot --------
 sns.pairplot(data, diag_kind='kde')
 plt.suptitle("Pairplot of California Housing Features", y=1.02)
 plt.show()
@@ -86,29 +69,20 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 from sklearn.decomposition import PCA
 
-# Load Iris dataset
 iris = load_iris()
 data = iris.data
 target = iris.target
 labels = iris.target_names
-
-# Apply PCA (reduce to 2 components)
 pca = PCA(n_components=2)
 data_reduced = pca.fit_transform(data)
-
-# Create DataFrame for visualization
 df = pd.DataFrame(data_reduced, columns=['PC1', 'PC2'])
 df['target'] = target
 
-# Plot PCA result
 plt.figure(figsize=(8,6))
 colors = ['red', 'green', 'blue']
-
 for i in range(3):
-    plt.scatter(df[df['target']==i]['PC1'],
-                df[df['target']==i]['PC2'],
-                c=colors[i],
-                label=labels[i])
+    plt.scatter(df[df['target']==i]['PC1'], df[df['target']==i]['PC2'],
+       c=colors[i],    label=labels[i])
 
 plt.xlabel("Principal Component 1 (PC1)")
 plt.ylabel("Principal Component 2 (PC2)")
@@ -155,27 +129,17 @@ b) Classify the remaining points x51,…,x100 using KNN. Perform this for k = 1,
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 
-# Generate 100 random values between 0 and 1
 data = np.random.rand(100).reshape(-1,1)
-
-# Label first 50 values
 labels = np.array(["Class1" if x <= 0.5 else "Class2" for x in data[:50]])
 
-# Split into training and testing
 X_train = data[:50]
 y_train = labels
 X_test = data[50:]
-
-# Different k values
 k_values = [1,2,3,4,5,20,30]
-
-# Apply KNN
 for k in k_values:
     model = KNeighborsClassifier(n_neighbors=k)
     model.fit(X_train, y_train)
-
     predictions = model.predict(X_test)
-
     print(f"\nResults for k = {k}:")
     print(predictions)
 LAB 6
@@ -185,39 +149,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.nonparametric.kernel_regression import KernelReg
 
-# Generate data
 np.random.seed(42)
-
 X = np.linspace(0, 2*np.pi, 100)
 y = np.sin(X) + 0.1*np.random.randn(100)
 
-# Train LWR model
 model = KernelReg(y, X, 'c')
-
-# Test data
 x_test = np.linspace(0, 2*np.pi, 200)
-
-# Predict values
 y_pred, _ = model.fit(x_test)
 
-# Plot graph
 plt.figure(figsize=(10,6))
-
-plt.scatter(X, y, color='red', s=60,
-            label="Training Data")
-
-plt.plot(x_test, y_pred,
-         color='blue',
-         linewidth=3,
-         label="LWR Fit")
-
+plt.scatter(X, y, color='red', s=60,label="Training Data")
+plt.plot(x_test, y_pred, color='blue', linewidth=3,   label="LWR Fit")
 plt.title("Locally Weighted Regression")
 plt.xlabel("X")
 plt.ylabel("Y")
-
 plt.legend()
 plt.tight_layout()
-
 plt.show()
 ________________________________________
 LAB 7
@@ -233,58 +180,33 @@ from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import mean_squared_error, r2_score
 
-
-# -------- Linear Regression (Boston Housing Dataset) --------
-
 def linear_regression_boston():
-
-    # Load dataset
     url = "https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv"
-
     df = pd.read_csv(url)
 
-    # Select feature and target
     X = df[["rm"]].values
     y = df["medv"].values
 
-    # Split dataset
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
+        X, y, test_size=0.2, random_state=42 )
 
-    # Create model
     model = LinearRegression()
-
-    # Train model
     model.fit(X_train, y_train)
-
-    # Predict values
     y_pred = model.predict(X_test)
 
-    # Plot graph
     plt.scatter(X_test, y_test, color="blue", label="Actual")
     plt.scatter(X_test, y_pred, color="red", label="Predicted")
-
     plt.xlabel("Average number of rooms per dwelling")
     plt.ylabel("Median value of homes ($1000)")
     plt.title("Linear Regression - Boston Housing")
-
     plt.legend()
     plt.show()
-
-    # Evaluation
     print("Linear Regression - Boston Housing Dataset")
     print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
     print("R2 Score:", r2_score(y_test, y_pred))
 
-
-# -------- Polynomial Regression (Auto MPG Dataset) --------
-
 def polynomial_regression_auto_mpg():
-
-    # Load dataset
     url = "https://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data"
-
     column_names = [
         "mpg",
         "cylinders",
@@ -296,83 +218,48 @@ def polynomial_regression_auto_mpg():
         "origin"
     ]
 
-    data = pd.read_csv(
-        url,
-        sep="\s+",
-        names=column_names,
-        na_values='?'
-    )
-
-    # Remove missing values
+    data = pd.read_csv(   url,  sep="\s+", names=column_names         na_values='?'   )
     data = data.dropna()
-
-    # Select feature and target
     X = data["displacement"].values.reshape(-1,1)
     y = data["mpg"].values
-
-    # Split dataset
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
-
-    # Create polynomial regression model
-    poly_model = make_pipeline(
-        PolynomialFeatures(degree=2),
-        LinearRegression()
-    )
-
-    # Train model
+        X, y, test_size=0.2, random_state=42  )
+    poly_model = make_pipeline(  PolynomialFeatures(degree=2),
+        LinearRegression() )
     poly_model.fit(X_train, y_train)
-
-    # Predict values
     y_pred = poly_model.predict(X_test)
-
-    # Plot graph
+ 
     plt.scatter(X_test, y_test, color="blue", label="Actual")
     plt.scatter(X_test, y_pred, color="red", label="Predicted")
-
     plt.xlabel("Displacement")
     plt.ylabel("Miles per gallon (MPG)")
     plt.title("Polynomial Regression - Auto MPG Dataset")
-
     plt.legend()
     plt.show()
-
-    # Evaluation
     print("Polynomial Regression - Auto MPG Dataset")
     print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
     print("R2 Score:", r2_score(y_test, y_pred))
 
 
-# -------- Main Function --------
-
 if __name__ == "__main__":
 
     print("Demonstrating Linear Regression and Polynomial Regression\n")
-
     linear_regression_boston()
-
     polynomial_regression_auto_mpg()
 LAB 8
 Question
 Develop a program to demonstrate the working of the Decision Tree algorithm. Use Breast Cancer Dataset for building the Decision Tree and apply this knowledge to classify a new sample.
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from sklearn.datasets import load_breast_cancer
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.preprocessing import LabelEncoder
 
-# Train Breast Cancer model
 cancer = load_breast_cancer()
-
 model = DecisionTreeClassifier(max_depth=9)
-
 model.fit(cancer.data, cancer.target)
-
 print("Model trained Successfully...")
 
-# Sample dataset
 data = pd.DataFrame({
     'cgpa':[9.2,8.5,9.0,7.5,8.2,9.1,7.8,9.3,8.4,8.6],
     'interactiveness':['yes','no','no','no','yes','yes','yes','yes','no','yes'],
@@ -384,7 +271,6 @@ data = pd.DataFrame({
                  'yes','no','yes','yes','yes']
 })
 
-# Encode categorical columns
 le1 = LabelEncoder()
 le2 = LabelEncoder()
 le3 = LabelEncoder()
@@ -395,26 +281,15 @@ data['practical_knowledge'] = le2.fit_transform(data['practical_knowledge'])
 data['communication'] = le3.fit_transform(data['communication'])
 data['job_offer'] = le4.fit_transform(data['job_offer'])
 
-# Features and target
 X = data.drop('job_offer', axis=1)
 y = data['job_offer']
-
-# Train Decision Tree
 tree = DecisionTreeClassifier(max_depth=4)
-
 tree.fit(X, y)
 
-# Plot tree
 plt.figure(figsize=(12,6))
-
-plot_tree(tree,
-          filled=True,
-          feature_names=X.columns,
-          class_names=le4.classes_)
-
+plot_tree(tree,    filled=True,   feature_names=X.columns,   class_names=le4.classes_)
 plt.show()
 
-# Test sample
 test = pd.DataFrame([{
     'cgpa':8.5,
     'interactiveness':'yes',
@@ -422,79 +297,45 @@ test = pd.DataFrame([{
     'communication':'good'
 }])
 
-# Encode test sample
 test['interactiveness'] = le1.transform(test['interactiveness'])
 test['practical_knowledge'] = le2.transform(test['practical_knowledge'])
 test['communication'] = le3.transform(test['communication'])
-
-# Predict
 pred = tree.predict(test)
-
 print("Prediction:", le4.inverse_transform(pred)[0])
 ________________________________________
 LAB 9
 Question
 Develop a program to implement the Naive Bayesian classifier considering Olivetti Face Dataset for training. Compute the accuracy of the classifier, considering a few test data sets.
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-import matplotlib.pyplot as plt
-
-# Load dataset
 data = fetch_olivetti_faces(shuffle=True, random_state=42)
-
 X = data.data
 y = data.target
 
-# Split dataset
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y,
-    test_size=0.3,
-    random_state=42
-)
-
-# Train model
+X_train, X_test, y_train, y_test = train_test_split( X, y,test_size=0.3,
+    random_state=42)
 model = GaussianNB()
-
 model.fit(X_train, y_train)
-
-# Predict values
 y_pred = model.predict(X_test)
 
-# Accuracy
-print("Accuracy:",
-      accuracy_score(y_test, y_pred) * 100, "%")
-
-# Classification Report
+print("Accuracy:", accuracy_score(y_test, y_pred) * 100, "%")
 print("\nClassification Report:\n")
-
 print(classification_report(y_test, y_pred))
-
-# Confusion Matrix
 print("\nConfusion Matrix:\n")
-
 print(confusion_matrix(y_test, y_pred))
 
-# Display images
 fig, axes = plt.subplots(3, 5, figsize=(12,8))
 
-for ax, img, true, pred in zip(
-        axes.ravel(),
-        X_test,
-        y_test,
-        y_pred):
-
+for ax, img, true, pred in zip(  axes.ravel(),  X_test, y_test,y_pred):
     ax.imshow(img.reshape(64,64), cmap='gray')
-
     ax.set_title(f"True:{true} Pred:{pred}")
-
     ax.axis('off')
-
 plt.tight_layout()
-
 plt.show()
 ________________________________________
 LAB 10
